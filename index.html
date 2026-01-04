@@ -4,242 +4,432 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>I'm Arun 😊</title>
+    <title>Arun Raj -Full-Stack Software Engineer</title>
+    <link rel="icon" type="image/svg+xml" href="favicon.svg">
+    <link rel="apple-touch-icon" href="favicon.svg">
     <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Baloo+Paaji&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.1/aos.css" />
 </head>
 
 <body>
-
-    <!-- Navbar -->
-    <nav class="navbar-gradient shadow fixed w-full z-10">
-        <div class="container mx-auto px-4 py-2 flex justify-between items-center">
-            <div class="text-2xl font-bold text-white font-baloo group">
-                <span class="title">Arun Raj</span>
+    <!-- Modern Navbar with Glassmorphism -->
+    <nav class="modern-navbar fixed w-full z-50 backdrop-blur-md">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <div class="logo-container">
+                <span class="logo-text font-elegant">AR</span>
             </div>
             
-            <!-- Hamburger Menu -->
-            <div class="md:hidden">
-                <button id="hamburger-button" class="text-white focus:outline-none">
-                    <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
-                            d="M4 6h16M4 12h16m-7 6h7"></path>
+            <!-- Desktop Navigation -->
+            <ul id="navbar" class="hidden md:flex space-x-8 items-center">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#experience" class="nav-link">Experience</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#contact" class="nav-link-cta">Contact</a></li>
+            </ul>
+            
+            <!-- Mobile Menu Button -->
+            <button id="hamburger-button" class="md:hidden focus:outline-none" style="color: var(--text-dark);">
+                <svg id="hamburger-icon" class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7"></path>
                     </svg>
-                    <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24"
-                        xmlns="http://www.w3.org/2000/svg">
-                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12">
-                        </path>
+                <svg id="close-icon" class="w-6 h-6 hidden" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
                     </svg>
                 </button>
-            </div>
-            <!-- Navigation Links -->
-            <ul id="navbar" class="hidden md:flex space-x-6">
-                <li class="relative group"><a href="#home" class="text-white hover:text-gray-300 font-baloo">Home</a>
-                </li>
-                <li class="relative group"><a href="#about" class="text-white hover:text-gray-300 font-baloo">About</a>
-                </li>
-                <li class="relative group"><a href="#projects"
-                        class="text-white hover:text-gray-300 font-baloo">Projects</a></li>
-                <li class="relative group"><a href="#experience"
-                        class="text-white hover:text-gray-300 font-baloo">Experience</a></li>
-                <li class="relative group"><a href="#education"
-                        class="text-white hover:text-gray-300 font-baloo">Education</a></li>
-                <li class="relative group"><a href="#skills"
-                        class="text-white hover:text-gray-300 font-baloo">Skills</a></li>
-                <li class="relative group"><a href="#contact"
-                        class="text-white hover:text-gray-300 font-baloo">Contact</a></li>
-            </ul>
         </div>
 
         <!-- Mobile Menu -->
-        <div id="mobile-menu" class="md:hidden bg-black hidden">
-            <ul class="flex flex-col space-y-2 p-4">
-                <li><a href="#home" class="menu-item block text-white hover:text-gray-300">Home</a></li>
-                <li><a href="#about" class="menu-item block text-white hover:text-gray-300">About</a></li>
-                <li><a href="#projects" class="menu-item block text-white hover:text-gray-300">Projects</a></li>
-                <li><a href="#experience" class="menu-item block text-white hover:text-gray-300">Experience</a></li>
-                <li><a href="#education" class="menu-item block text-white hover:text-gray-300">Education</a></li>
-                <li><a href="#skills" class="menu-item block text-white hover:text-gray-300">Skills</a></li>
-                <li><a href="#contact" class="menu-item block text-white hover:text-gray-300">Contact</a></li>
+        <div id="mobile-menu" class="md:hidden mobile-menu hidden">
+            <ul class="flex flex-col space-y-4 p-6">
+                <li><a href="#home" class="mobile-nav-link">Home</a></li>
+                <li><a href="#about" class="mobile-nav-link">About</a></li>
+                <li><a href="#experience" class="mobile-nav-link">Experience</a></li>
+                <li><a href="#skills" class="mobile-nav-link">Skills</a></li>
+                <li><a href="#projects" class="mobile-nav-link">Projects</a></li>
+                <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
             </ul>
         </div>
     </nav>
 
-    <!-- Hero Section -->
-    <header id="home" class="bg-cover bg-center h-screen" style="background-image: url('images/arun2.jpg');">
-        <div class="flex items-center justify-center h-full bg-black bg-opacity-50">
-            <div class="text-center text-white">
-                <h1 class="text-5xl font-bold">
-                    <span class="mb-4 md:text-3xl lg:text-4xl">Hi </span><br />
-
-                    <span class="floating-letter text-4xl sm:text-1xl md:text-5xl lg:text-6xl">I</span>
-                    <span class="floating-letter text-4xl sm:text-1xl md:text-5xl lg:text-6xl">'m</span>
-                    <span class="floating-letter text-4xl sm:text-1xl md:text-5xl lg:text-6xl"> </span>
-                    <span class="floating-letter text-4xl sm:text-1xl md:text-5xl lg:text-6xl">A</span>
-                    <span class="floating-letter text-4xl sm:text-1xl md:text-5xl lg:text-6xl"> </span>
-                    <span class="floating-letter text-4xl sm:text-1xl md:text-5xl lg:text-6xl">R</span>
-                    <span class="floating-letter text-4xl sm:text-1xl md:text-5xl lg:text-6xl">U</span>
-                    <span class="floating-letter text-4xl sm:text-1xl md:text-5xl lg:text-6xl">N</span>
-                    <span class="floating-letter text-4xl sm:text-1xl md:text-5xl lg:text-6xl"> </span>
-                    <span class="floating-letter text-4xl sm:text-1xl md:text-5xl lg:text-6xl">R</span>
-                    <span class="floating-letter text-4xl sm:text-1xl md:text-5xl lg:text-6xl">A</span>
-                    <span class="floating-letter text-4xl sm:text-1xl md:text-5xl lg:text-6xl">J</span>
+    <!-- Modern Hero Section -->
+    <section id="home" class="hero-section min-h-screen flex items-center justify-center relative overflow-hidden">
+        <div class="hero-background"></div>
+        <div class="hero-content text-center z-10 px-4" data-aos="fade-up">
+            <div class="hero-badge mb-6">
+                <span class="badge-text">Full-Stack Engineer</span>
+            </div>
+            <h1 class="hero-title font-elegant mb-6">
+                <span class="title-line">Hi, I'm</span>
+                <span class="title-name">Arun Raj</span>
                 </h1>
-                <p class="mt-4 text-xl animate__animated animate__fadeIn">SOFTWARE ENGINEER</p>
-                <p class="mt-4 text-xl animate__animated animate__fadeIn text-custom-color">"Creativity is just
-                    connecting things...."</p>
+            <p class="hero-subtitle mb-8 max-w-2xl mx-auto">
+                Crafting beautiful, responsive web and mobile experiences with modern technologies
+            </p>
+            <div class="hero-info-grid mb-8">
+                <div class="info-item">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span>Kasaragod, Kerala, India</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-phone"></i>
+                    <span>+91 90487 11385</span>
+                </div>
+                <div class="info-item">
+                    <i class="fas fa-envelope"></i>
+                    <span>arunrajvradhakrishnan@gmail.com</span>
+                </div>
+            </div>
+            <div class="hero-actions flex flex-wrap justify-center gap-4">
+                <a href="#contact" class="btn-primary">
+                    <span>Get In Touch</span>
+                    <i class="fas fa-arrow-right ml-2"></i>
+                </a>
+                <a href="Arun_Raj.pdf" download class="btn-secondary">
+                    <i class="fas fa-download mr-2"></i>
+                    <span>Download CV</span>
+                </a>
+            </div>
+            <div class="hero-social mt-12 flex justify-center space-x-6">
+                <a href="https://www.linkedin.com/in/arun-raj-b91038214" target="_blank" class="social-icon">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a href="https://wa.me/919048711385" target="_blank" class="social-icon">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
             </div>
         </div>
-    </header>
+    </section>
 
-    <!-- About Section -->
-    <section id="about" class="py-12 mt-16 section-background" data-aos="zoom-in" data-aos-duration="800">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-white">About Me</h2>
-            <div class="bg-black p-8 rounded-lg shadow-lg mt-6">
-                <p class="mt-4 text-center text-custom-color">
-                    Frontend Developer with 1.5 years of experience in building responsive and
-                    user-friendly websites. Skilled in React.js, JavaScript, HTML, and CSS, with
-                    expertise in using Bootstrap and Tailwind CSS for efficient and flexible styling.
-                    Proficient in converting Figma designs into interactive and functional web pages.
-                    Adept at writing clean, maintainable code and ensuring websites are optimized for
-                    performance across various devices and browsers. Strong focus on cross-browser
-                    compatibility and mobile-first design. Continuously learning and staying updated
-                    with the latest web development trends and best practices to improve workflow and
-                    project outcomes.
+    <!-- About Section with Modern Layout -->
+    <section id="about" class="section-modern py-20" data-aos="fade-up">
+        <div class="container mx-auto px-6">
+            <div class="section-header text-center mb-16">
+                <span class="section-label">About Me</span>
+                <h2 class="section-title font-elegant">Professional Summary</h2>
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <div class="glass-card p-10">
+                    <p class="text-lg leading-relaxed text-custom-color">
+                        Frontend-focused <strong style="color: var(--text-dark);">Full-Stack Software Engineer</strong> with <strong style="color: var(--text-dark);">2.5+ years</strong> of experience in building responsive web and mobile applications using React, React Native, JavaScript, and Java. Strong in translating Figma designs into pixel-perfect, reusable UI components and integrating applications with RESTful APIs.
+                    </p>
+                    <p class="text-lg leading-relaxed text-custom-color mt-6">
+                        Hands-on experience with PostgreSQL and MySQL, collaboration with backend systems using Spring Boot, and Agile development practices. Proven ability to design scalable frontend architecture and reusable component libraries that improve development efficiency.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section with Timeline -->
+    <section id="experience" class="section-modern py-20" data-aos="fade-up">
+        <div class="container mx-auto px-6">
+            <div class="section-header text-center mb-16">
+                <span class="section-label">Experience</span>
+                <h2 class="section-title font-elegant">Professional Journey</h2>
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <div class="timeline">
+                    <!-- Experience 1 -->
+                    <div class="timeline-item" data-aos="fade-right">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content glass-card">
+                            <div class="timeline-header">
+                                <h3 class="font-elegant text-2xl mb-2" style="color: var(--text-dark);">Software Engineer</h3>
+                                <div class="timeline-meta">
+                                    <span class="company text-custom-color font-semibold">Sequoia Applied Technologies</span>
+                                    <span class="location" style="color: var(--text-dark); opacity: 0.7;">Chennai, Tamil Nadu</span>
+                                    <span class="date text-custom-color">June 2023 – Present</span>
+                                </div>
+                            </div>
+                            <ul class="timeline-list">
+                                <li>Developed and maintained responsive web and mobile applications using React and React Native</li>
+                                <li>Translated Figma UI/UX designs into scalable, reusable, and accessible frontend components</li>
+                                <li>Integrated frontend applications with RESTful APIs built using Java Spring Boot</li>
+                                <li>Designed and developed a reusable NPM package to standardize frontend components</li>
+                                <li>Worked with PostgreSQL for querying, validating, and managing application data</li>
+                                <li>Leveraged AI tools (ChatGPT, Cursor AI, GitHub Copilot) for productivity improvements</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Experience 2 -->
+                    <div class="timeline-item" data-aos="fade-right" data-aos-delay="100">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content glass-card">
+                            <div class="timeline-header">
+                                <h3 class="font-elegant text-2xl mb-2" style="color: var(--text-dark);">Service Advisor</h3>
+                                <div class="timeline-meta">
+                                    <span class="company text-custom-color font-semibold">Apco Hyundai</span>
+                                    <span class="location" style="color: var(--text-dark); opacity: 0.7;">Kasaragod, Kerala</span>
+                                    <span class="date text-custom-color">August 2022 – January 2023</span>
+                                </div>
+                            </div>
+                            <ul class="timeline-list">
+                                <li>Managed customer service workflows and coordinated repair processes</li>
+                                <li>Diagnosed issues and ensured effective communication between customers and technical teams</li>
+                                <li>Strengthened problem-solving and client-handling skills</li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <!-- Experience 3 -->
+                    <div class="timeline-item" data-aos="fade-right" data-aos-delay="200">
+                        <div class="timeline-marker"></div>
+                        <div class="timeline-content glass-card">
+                            <div class="timeline-header">
+                                <h3 class="font-elegant text-2xl mb-2" style="color: var(--text-dark);">NDT Technician</h3>
+                                <div class="timeline-meta">
+                                    <span class="company text-custom-color font-semibold">Geecy Apave Pvt. Ltd.</span>
+                                    <span class="location" style="color: var(--text-dark); opacity: 0.7;">Bhiwandi, Maharashtra</span>
+                                    <span class="date text-custom-color">December 2021 – March 2022</span>
+                                </div>
+                            </div>
+                            <ul class="timeline-list">
+                                <li>Performed Non-Destructive Testing (NDT) operations at Reliance Refinery, Gujarat</li>
+                                <li>Ensured compliance with safety and quality standards in industrial environments</li>
+                            </ul>
+                </div>
+                </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section with Modern Grid -->
+    <section id="skills" class="section-modern py-20" data-aos="fade-up">
+        <div class="container mx-auto px-6">
+            <div class="section-header text-center mb-16">
+                <span class="section-label">Skills</span>
+                <h2 class="section-title font-elegant">Technical Expertise</h2>
+            </div>
+            <div class="max-w-6xl mx-auto">
+                <div class="skills-grid">
+                    <div class="skill-category glass-card" data-aos="zoom-in">
+                        <div class="skill-icon">
+                            <i class="fas fa-code"></i>
+                        </div>
+                        <h3 class="font-elegant text-xl mb-4" style="color: var(--text-dark);">Programming Languages</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">JavaScript (ES6+)</span>
+                            <span class="skill-tag">Java</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category glass-card" data-aos="zoom-in" data-aos-delay="100">
+                        <div class="skill-icon">
+                            <i class="fas fa-laptop-code"></i>
+                        </div>
+                        <h3 class="font-elegant text-xl mb-4" style="color: var(--text-dark);">Frontend Development</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">React.js</span>
+                            <span class="skill-tag">React Native</span>
+                            <span class="skill-tag">HTML5</span>
+                            <span class="skill-tag">CSS3</span>
+                            <span class="skill-tag">Bootstrap</span>
+                            <span class="skill-tag">Responsive Design</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category glass-card" data-aos="zoom-in" data-aos-delay="200">
+                        <div class="skill-icon">
+                            <i class="fas fa-server"></i>
+                        </div>
+                        <h3 class="font-elegant text-xl mb-4" style="color: var(--text-dark);">Backend & APIs</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">REST API Integration</span>
+                            <span class="skill-tag">Java Spring Boot</span>
+                            <span class="skill-tag">Backend Collaboration</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category glass-card" data-aos="zoom-in" data-aos-delay="300">
+                        <div class="skill-icon">
+                            <i class="fas fa-database"></i>
+                        </div>
+                        <h3 class="font-elegant text-xl mb-4" style="color: var(--text-dark);">Databases</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">PostgreSQL</span>
+                            <span class="skill-tag">MySQL</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category glass-card" data-aos="zoom-in" data-aos-delay="400">
+                        <div class="skill-icon">
+                            <i class="fas fa-tools"></i>
+                        </div>
+                        <h3 class="font-elegant text-xl mb-4" style="color: var(--text-dark);">Tools & Platforms</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Git</span>
+                            <span class="skill-tag">GitHub</span>
+                            <span class="skill-tag">Postman</span>
+                            <span class="skill-tag">VS Code</span>
+                        </div>
+                    </div>
+
+                    <div class="skill-category glass-card" data-aos="zoom-in" data-aos-delay="500">
+                        <div class="skill-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3 class="font-elegant text-xl mb-4" style="color: var(--text-dark);">Design & Methodologies</h3>
+                        <div class="skill-tags">
+                            <span class="skill-tag">Figma</span>
+                            <span class="skill-tag">Agile & Scrum</span>
+                            <span class="skill-tag">AI-Assisted Development</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section with Modern Cards -->
+    <section id="projects" class="section-modern py-20" data-aos="fade-up">
+        <div class="container mx-auto px-6">
+            <div class="section-header text-center mb-16">
+                <span class="section-label">Projects</span>
+                <h2 class="section-title font-elegant">Featured Work</h2>
+            </div>
+            <div class="max-w-7xl mx-auto">
+                <div class="projects-grid">
+                    <div class="project-card glass-card" data-aos="flip-left">
+                        <div class="project-number">01</div>
+                        <h3 class="font-elegant text-2xl mb-4" style="color: var(--text-dark);">ATNDNZ</h3>
+                        <p class="text-custom-color leading-relaxed">
+                            Developed the web interface for an Office Attendance Management System that allows users to mark their entry and exit via a mobile app. Managers can monitor and manage attendance data through a responsive web portal with real-time tracking and report generation.
+                        </p>
+                    </div>
+
+                    <div class="project-card glass-card" data-aos="flip-left" data-aos-delay="100">
+                        <div class="project-number">02</div>
+                        <h3 class="font-elegant text-2xl mb-4" style="color: var(--text-dark);">PROFILE BUILDER</h3>
+                        <p class="text-custom-color leading-relaxed">
+                            A web application for creating customized resumes in PDF and Word formats. Users can enter their professional experience, skills, and education through an intuitive interface. The app generates personalized templates with layout and style customization.
+                        </p>
+                    </div>
+
+                    <div class="project-card glass-card" data-aos="flip-left" data-aos-delay="200">
+                        <div class="project-number">03</div>
+                        <h3 class="font-elegant text-2xl mb-4" style="color: var(--text-dark);">WEB-VIRTUAL-TOUR</h3>
+                        <p class="text-custom-color leading-relaxed">
+                            Created a reusable step-by-step user guide component using React to enhance user onboarding experience. The component seamlessly guides users through key features of the app, ensuring they can easily navigate and utilize its functionalities.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Languages Combined Section -->
+    <section id="education" class="section-modern py-20" data-aos="fade-up">
+        <div class="container mx-auto px-6">
+            <div class="max-w-6xl mx-auto">
+                <div class="edu-lang-grid">
+                    <!-- Education -->
+                    <div class="glass-card" data-aos="fade-right">
+                        <div class="section-header mb-6">
+                            <span class="section-label">Education</span>
+                            <h2 class="section-title font-elegant text-2xl">Academic Background</h2>
+                        </div>
+                        <div class="education-item">
+                            <h3 class="font-elegant text-xl mb-2" style="color: var(--text-dark);">Bachelor of Technology (B.Tech)</h3>
+                            <p class="text-custom-color font-semibold mb-1">Mechanical Engineering</p>
+                            <p style="color: var(--text-dark); opacity: 0.8; margin-bottom: 0.5rem;">LBS College of Engineering, Kasaragod</p>
+                            <p style="color: var(--text-dark); opacity: 0.7;">2016 – 2020</p>
+                        </div>
+                    </div>
+
+                    <!-- Languages -->
+                    <div class="glass-card" data-aos="fade-left">
+                        <div class="section-header mb-6">
+                            <span class="section-label">Languages</span>
+                            <h2 class="section-title font-elegant text-2xl">Communication</h2>
+                        </div>
+                        <div class="languages-list">
+                            <div class="language-item">
+                                <span class="lang-name">English</span>
+                                <span class="lang-level">Fluent</span>
+                            </div>
+                            <div class="language-item">
+                                <span class="lang-name">Malayalam</span>
+                                <span class="lang-level">Native</span>
+                            </div>
+                            <div class="language-item">
+                                <span class="lang-name">Tamil</span>
+                                <span class="lang-level">Intermediate</span>
+                            </div>
+                            <div class="language-item">
+                                <span class="lang-name">Hindi</span>
+                                <span class="lang-level">Basic</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section with Modern Design -->
+    <section id="contact" class="section-modern py-20" data-aos="fade-up">
+        <div class="container mx-auto px-6">
+            <div class="section-header text-center mb-16">
+                <span class="section-label">Contact</span>
+                <h2 class="section-title font-elegant">Let's Connect</h2>
+                <p class="text-custom-color text-lg mt-4 max-w-2xl mx-auto">
+                    I'm open to opportunities in South India & Dubai. Feel free to reach out!
                 </p>
-                <!-- Download CV Button -->
-                <div class="text-center mt-6">
-                    <a href="ArunRaj.pdf" download
-                        class="inline-block bg-green-500 text-white font-bold py-2 px-4 rounded hover:bg-green-400 transition duration-300">
-                        Download CV
+            </div>
+            <div class="max-w-4xl mx-auto">
+                <div class="contact-grid">
+                    <a href="mailto:arunrajvradhakrishnan@gmail.com" class="contact-card glass-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <h3 class="font-elegant text-xl mb-2" style="color: var(--text-dark);">Email</h3>
+                        <p class="text-custom-color">arunrajvradhakrishnan@gmail.com</p>
+                    </a>
+
+                    <a href="tel:+919048711385" class="contact-card glass-card">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <h3 class="font-elegant text-xl mb-2" style="color: var(--text-dark);">Phone</h3>
+                        <p class="text-custom-color">+91 90487 11385</p>
+                    </a>
+
+                    <a href="https://www.linkedin.com/in/arun-raj-b91038214" target="_blank" class="contact-card glass-card">
+                        <div class="contact-icon">
+                            <i class="fab fa-linkedin"></i>
+                        </div>
+                        <h3 class="font-elegant text-xl mb-2" style="color: var(--text-dark);">LinkedIn</h3>
+                        <p class="text-custom-color">Connect with me</p>
                     </a>
                 </div>
             </div>
         </div>
     </section>
 
-
-    <!-- Projects Section -->
-    <section id="projects" class="py-12 section-background" data-aos="zoom-in" data-aos-duration="800">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-white">Projects</h2>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 mt-6">
-                <div class="bg-black p-4 rounded-lg shadow hover:shadow-lg transition-shadow duration-300">
-                    <h3 class="font-semibold text-white">ATNDNZ</h3>
-                    <p class="mt-2 text-custom-color">Developed the web interface for an Office Attendance Management
-                        System that allows users to mark their entry and exit via a mobile app. Managers can monitor and
-                        manage attendance data through a responsive web portal. The system features real-time attendance
-                        tracking, report generation, and data visualization to simplify attendance management in office
-                        settings</p>
-                </div>
-                <div class="bg-black p-4 rounded-lg shadow hover:shadow-lg transition-shadow duration-300">
-                    <h3 class="font-semibold text-white">PROFILE BUILDER</h3>
-                    <p class="mt-2 text-custom-color">The Profile Builder is a web application for creating customized
-                        resumes in PDF and Word formats. Users can enter their professional experience, skills, and
-                        education through an intuitive interface. The app generates personalized templates that allow
-                        layout and style customization. Using python-docx and pdfkit, users can easily download polished
-                        resumes, streamlining the profile creation process for managers and HR professionals.</p>
-                </div>
-                <div class="bg-black p-4 rounded-lg shadow hover:shadow-lg transition-shadow duration-300">
-                    <h3 class="font-semibold text-white">VIRTUAL TOUR</h3>
-                    <p class="mt-2 text-custom-color">This project involved the creation of a reusable step-by-step user
-                        guide component using React. The primary goal was to enhance the user onboarding experience for
-                        new users logging into the application for the first time. The component is designed to
-                        seamlessly guide users through key features of the app, ensuring they can easily navigate and
-                        utilize its functionalities.</p>
+    <!-- Modern Footer -->
+    <footer class="modern-footer py-8">
+        <div class="container mx-auto px-6">
+            <div class="footer-content flex flex-col md:flex-row justify-between items-center">
+                <p class="font-elegant mb-4 md:mb-0" style="color: var(--text-dark);">© 2024 Arun Raj. All Rights Reserved.</p>
+                <div class="footer-social flex space-x-4">
+                    <a href="https://www.linkedin.com/in/arun-raj-b91038214" target="_blank" class="footer-icon">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
+                    <a href="https://arunraj1997.github.io/Arunraj/" target="_blank" class="footer-icon">
+                        <i class="fas fa-globe"></i>
+                    </a>
+                    <a href="https://wa.me/919048711385" target="_blank" class="footer-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </a>
                 </div>
             </div>
-        </div>
-    </section>
-
-    <!-- Experience Section -->
-    <section id="experience" class="py-12" data-aos="zoom-in" data-aos-duration="800">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-white">Experience</h2>
-            <ul class="mt-4">
-                <li class="bg-black p-4 rounded-lg shadow mb-4 text-custom-color">Software Engineer - Sequoia Applied
-                    Technologies (2023 - present) - Develop and Maintain User Interfaces: Create responsive and visually
-                    appealing web pages using React.js, JavaScript, HTML, and CSS, ensuring cross-browser compatibility
-                    and smooth user experiences.
-                    Collaborate with Design and Backend Teams: Work closely with designers to translate Figma mockups
-                    into interactive websites, and integrate with RESTful APIs for dynamic data handling.
-                    Optimize Performance and Code Quality: Write clean, reusable code and apply web optimization
-                    techniques to ensure fast, efficient, and scalable websites across different devices and platforms.
-                </li>
-                <li class="bg-black p-4 rounded-lg shadow mb-4 text-custom-color">Servise Advisor - CApco Hyundai (2022-
-                    2023) - Worked as a service advisor at apco hyundai and served the customer by taking care of the
-                    services of there vehicle on time by satisfying them</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Education Section -->
-    <section id="education" class="py-12 section-background" data-aos="zoom-in" data-aos-duration="800">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-white">Education</h2>
-            <ul class="mt-4">
-                <li class="bg-black p-4 rounded-lg shadow mb-4 text-custom-color">Btech Mechanical Engineering - LBSCE
-                    Kasargod (2016 - 2020)</li>
-                <li class="bg-black p-4 rounded-lg shadow mb-4 text-custom-color">Higher Secondary - HFHSS, Rajapuram
-                    (2015 - 2016)</li>
-            </ul>
-        </div>
-    </section>
-
-    <!-- Skills Section -->
-    <section id="skills" class="py-12  section-background" data-aos="zoom-in" data-aos-duration="800">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-white">Skills</h2>
-            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 mt-4">
-                <div class="bg-black p-4 rounded-lg shadow text-custom-color">JavaScript</div>
-                <div class="bg-black p-4 rounded-lg shadow text-custom-color">HTML5</div>
-                <div class="bg-black p-4 rounded-lg shadow text-custom-color">CSS3</div>
-                <div class="bg-black p-4 rounded-lg shadow text-custom-color">React js</div>
-                <div class="bg-black p-4 rounded-lg shadow text-custom-color">figma</div>
-                <div class="bg-black p-4 rounded-lg shadow text-custom-color">GIT</div>
-                <div class="bg-black p-4 rounded-lg shadow text-custom-color">Tailwind CSS</div>
-                <div class="bg-black p-4 rounded-lg shadow text-custom-color">Bootstrap</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="py-12 section-background" data-aos="zoom-in" data-aos-duration="800">
-        <div class="container mx-auto px-4">
-            <h2 class="text-3xl font-bold text-center text-white">Contact Me</h2>
-            <p class="text-center text-white mt-4">
-                Feel free to reach out via email at
-                <a href="mailto:arunrajvradhakrishnan@gmail.com"
-                    class="text-green-400">arunrajvradhakrishnan@gmail.com</a>
-            </p>
-
-            <!-- Social Media Links -->
-            <div class="flex justify-center mt-6">
-                <a href="https://wa.me/9048711385" target="_blank" class="mx-4 text-white hover:text-green-400">
-                    <i class="fab fa-whatsapp fa-1x"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/itsme-arun-raj/" target="_blank"
-                    class="mx-4 text-white hover:text-blue-400">
-                    <i class="fab fa-linkedin fa-1x"></i>
-                </a>
-                <a href="https://www.instagram.com/_arun_raj_/profilecard/?igsh=MWRnMWlxb25r0Gd1Nw==" target="_blank"
-                    class="mx-4 text-white hover:text-pink-400">
-                    <i class="fab fa-instagram fa-1x"></i>
-                </a>
-            </div>
-        </div>
-    </section>
-
-
-    <!-- Footer -->
-    <footer class="py-4 bg-black shadow">
-        <div class="container mx-auto text-center">
-            <p class="text-white">© 2024 Arun raj. All Rights Reserved.</p>
         </div>
     </footer>
 
@@ -249,10 +439,9 @@
     <script>
         AOS.init({
             duration: 1200,
+            once: true,
+            offset: 100
         });
-    </script>
-    <script>
-
     </script>
 </body>
 
